@@ -7,7 +7,7 @@
 
 .card-container {
   display: flex;
-  width: 22%;
+  width: 260px;
 }
 
 img {
@@ -22,6 +22,7 @@ img {
   display: flex;
   flex-direction: column;
   padding: 12px;
+  width: 100%;
 }
 
 .book-name {
@@ -32,4 +33,9 @@ img {
 
 .book-author {
   font-size: 14px;
+}
+
+.show-more {
+  width: 250px;
+  margin: 2rem auto;
 }

@@ -32,9 +32,6 @@ function App() {
           </div>
           <div className="search-panel">
             <BookContainer />
-            <div className="pagination">
-              <Pagination />
-            </div>
           </div>
         </div>
       </InstantSearch>
