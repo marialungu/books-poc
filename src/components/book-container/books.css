@@ -1,0 +1,35 @@
+.books-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 30px 15px;
+}
+
+.card-container {
+  display: flex;
+  width: 22%;
+}
+
+img {
+  display: block;
+  width: 115px;
+  border-radius: 10px;
+  height: auto;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
+}
+
+.book-details {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+}
+
+.book-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.book-author {
+  font-size: 14px;
+}

@@ -42,18 +42,8 @@ body { font-family: sans-serif; padding: 1em; }
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
-}
-
-.search-panel {
   display: flex;
-}
-
-.search-panel__filters {
-  flex: 1;
-}
-
-.search-panel__results {
-  flex: 3;
+  flex-direction: column;
 }
 
 .searchbox {
@@ -63,4 +53,9 @@ body { font-family: sans-serif; padding: 1em; }
 .pagination {
   margin: 2rem auto;
   text-align: center;
+}
+
+.results {
+  display: flex;
+  gap: 30px;
 }
