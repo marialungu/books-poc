@@ -8,8 +8,8 @@ import BookContainer from './components/book-container';
 import Metas from './components/metas';
 
 const searchClient = algoliasearch(
-  'FP907897DQ',
-  'cad92f3af97b2106eebf573b5a8492d9'
+  '',
+  ''
 );
 
 function App() {
