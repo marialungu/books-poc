@@ -1,41 +1,30 @@
 import React from 'react';
-import algoliasearch from 'algoliasearch/lite';
-import { InstantSearch, SearchBox, Pagination } from 'react-instantsearch-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import aa from 'search-insights';
+
 import 'instantsearch.css/themes/satellite.css';
 import './App.css';
-import BooksFilters from './components/books-filters';
-import BookContainer from './components/book-container';
-import Metas from './components/metas';
+import SearchPage from './screens/search-page';
+import BookPage from './screens/book-page';
 
-const searchClient = algoliasearch(
-  '',
-  ''
-);
+aa('init', {
+  appId: 'FP907897DQ',
+  apiKey: 'cad92f3af97b2106eebf573b5a8492d9',
+});
+
+aa('setUserToken', 'user-1');
 
 function App() {
   return (
-    <div className="container">
-      <InstantSearch searchClient={searchClient} indexName="books_poc">
-        <SearchBox
-          className="searchbox"
-          translations={{
-            placeholder: '',
-          }}
-          showLoadingIndicator={true}
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/products/:productID/:queryID"
+          element={<BookPage />}
         />
-        <div>
-          <Metas />
-        </div>
-        <div className="results">
-          <div className="left-panel">
-            <BooksFilters />
-          </div>
-          <div className="search-panel">
-            <BookContainer />
-          </div>
-        </div>
-      </InstantSearch>
-    </div>
+        <Route path="/" element={<SearchPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
