@@ -7,6 +7,9 @@ const BooksFilters = () => (
       <Panel header="Categories">
         <RefinementList attribute="categories" searchable />
       </Panel>
+      <Panel header="Authors">
+        <RefinementList attribute="authors" searchable />
+      </Panel>
     </DynamicWidgets>
   </>
 );

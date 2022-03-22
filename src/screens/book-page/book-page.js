@@ -1,13 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import algoliasearch from 'algoliasearch/lite';
 import { useParams } from 'react-router-dom';
+import { RelatedProducts } from '@algolia/recommend-react';
+import { HorizontalSlider } from '@algolia/ui-components-horizontal-slider-react';
+import '@algolia/ui-components-horizontal-slider-theme';
+import recommend from '@algolia/recommend';
+
 import aa from 'search-insights';
 import './book-page.css';
+
+const RelatedItem = ({item}) => {
+  return (
+    <div>{item.title}</div>
+  )
+}
 
 const searchClient = algoliasearch(
   'FP907897DQ',
   'cad92f3af97b2106eebf573b5a8492d9'
 );
+
+const recommendClient = recommend('FP907897DQ', 'cad92f3af97b2106eebf573b5a8492d9');
 
 const BookPage = () => {
   const indexName = 'books_poc';
@@ -62,6 +75,15 @@ const BookPage = () => {
         </div>
       </div>
       <div className="product-description">{description}</div>
+
+      <RelatedProducts
+        recommendClient={recommendClient}
+        indexName={indexName}
+        objectIDs={[productID]}
+        itemComponent={RelatedItem}
+        view={HorizontalSlider}
+        maxRecommendations={8}
+      />
     </div>
   );
 };
