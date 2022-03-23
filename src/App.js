@@ -6,6 +6,7 @@ import 'instantsearch.css/themes/satellite.css';
 import './App.css';
 import SearchPage from './screens/search-page';
 import BookPage from './screens/book-page';
+import AppHeader from './components/header';
 
 aa('init', {
   appId: 'FP907897DQ',
@@ -16,15 +17,14 @@ aa('setUserToken', 'user-1');
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path="/products/:productID/:queryID"
-          element={<BookPage />}
-        />
-        <Route path="/" element={<SearchPage />} />
-      </Routes>
-    </BrowserRouter>
+    <AppHeader>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/products/:productID/:queryID" element={<BookPage />} />
+          <Route path="/" element={<SearchPage />} />
+        </Routes>
+      </BrowserRouter>
+    </AppHeader>
   );
 }
 

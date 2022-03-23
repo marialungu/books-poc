@@ -34,10 +34,20 @@ const BookPage = () => {
       .then(({ hits }) => setProduct(hits[0]));
   }, []);
 
-  const addConversionEvent = () => {
+  const handleAddToFavorites = () => {
     aa('convertedObjectIDsAfterSearch', {
       index: indexName,
       eventName: 'Product Added to Favs',
+      userToken: 'user-1',
+      objectIDs: [productID],
+      queryID,
+    });
+  };
+
+  const handleAddToShelf = () => {
+    aa('convertedObjectIDsAfterSearch', {
+      index: indexName,
+      eventName: 'Product Added to Shelf',
       userToken: 'user-1',
       objectIDs: [productID],
       queryID,
@@ -57,7 +67,7 @@ const BookPage = () => {
   } = product;
 
   return (
-    <div className="container product">
+    <div className="container">
       <div className="header">Book details</div>
       <div className="product-container">
         <img className="details" src={thumbnail} align="center" alt={title} />
@@ -85,7 +95,7 @@ const BookPage = () => {
           <div className="action-btn">
             <button
               className="ais-ClearRefinements-button"
-              onClick={addConversionEvent}
+              onClick={handleAddToFavorites}
             >
               Add to favorites
             </button>
@@ -93,7 +103,7 @@ const BookPage = () => {
           <div className="action-btn">
             <button
               className="ais-ClearRefinements-button"
-              onClick={addConversionEvent}
+              onClick={handleAddToShelf}
             >
               Add to shelf
             </button>
