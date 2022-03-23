@@ -8,11 +8,8 @@ import recommend from '@algolia/recommend';
 
 import aa from 'search-insights';
 import './book-page.css';
-
-const RelatedItem = ({ item }) => <div>{item.title}</div>;
-
-  const Header = () => <div>Bleah</div>
-
+import SectionComponent from '../../components/section-component';
+import RecommendItem from '../../components/recommend-item';
 
 const searchClient = algoliasearch(
   'FP907897DQ',
@@ -66,11 +63,12 @@ const BookPage = () => {
         <img className="details" src={thumbnail} align="center" alt={title} />
         <div className="product-details">
           <div className="product-info">
-            <div className="product-author">By {authors}</div>
             <div className="product-name">
               <div className="product-title">{title}</div>-
               <div className="product-subtitle">{subtitle}</div>
             </div>
+            <div className="product-author">By {authors}</div>
+
           </div>
           <div className="product-metas">
             {/* eslint-disable-next-line camelcase */}
@@ -107,10 +105,10 @@ const BookPage = () => {
         recommendClient={recommendClient}
         indexName={indexName}
         objectIDs={[productID]}
-        itemComponent={RelatedItem}
+        itemComponent={RecommendItem}
         view={HorizontalSlider}
         maxRecommendations={8}
-        headerComponent={Header}
+        headerComponent={SectionComponent}
       />
     </div>
   );

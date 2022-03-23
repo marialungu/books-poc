@@ -7,13 +7,14 @@
 
 .card-container {
   display: flex;
-  width: 260px;
+  flex-direction: column;
+  width: 180px;
 }
 
 .book-details {
   display: flex;
   flex-direction: column;
-  padding: 12px;
+  padding: 1.5rem 0 1rem;
   width: 100%;
 }
 
