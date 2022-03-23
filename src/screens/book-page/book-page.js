@@ -9,18 +9,20 @@ import recommend from '@algolia/recommend';
 import aa from 'search-insights';
 import './book-page.css';
 
-const RelatedItem = ({item}) => {
-  return (
-    <div>{item.title}</div>
-  )
-}
+const RelatedItem = ({ item }) => <div>{item.title}</div>;
+
+  const Header = () => <div>Bleah</div>
+
 
 const searchClient = algoliasearch(
   'FP907897DQ',
   'cad92f3af97b2106eebf573b5a8492d9'
 );
 
-const recommendClient = recommend('FP907897DQ', 'cad92f3af97b2106eebf573b5a8492d9');
+const recommendClient = recommend(
+  'FP907897DQ',
+  'cad92f3af97b2106eebf573b5a8492d9'
+);
 
 const BookPage = () => {
   const indexName = 'books_poc';
@@ -58,23 +60,48 @@ const BookPage = () => {
   } = product;
 
   return (
-    <div className="product-container">
-      <img src={thumbnail} align="center" alt={title} />
-      <div className="product-details">
-        <div className="product-name">{title}</div>
-        <div className="product-subtitle">{subtitle}</div>
-        <div className="product-author">By {authors}</div>
-        <div className="product-metas">
-          {/* eslint-disable-next-line camelcase */}
-          <div className="product-pages">{num_pages} pages</div>
-          {/* eslint-disable-next-line camelcase */}
-          <div className="product-pages">Published in {published_year}</div>
+    <div className="container product">
+      <div className="header">Book details</div>
+      <div className="product-container">
+        <img className="details" src={thumbnail} align="center" alt={title} />
+        <div className="product-details">
+          <div className="product-info">
+            <div className="product-author">By {authors}</div>
+            <div className="product-name">
+              <div className="product-title">{title}</div>-
+              <div className="product-subtitle">{subtitle}</div>
+            </div>
+          </div>
+          <div className="product-metas">
+            {/* eslint-disable-next-line camelcase */}
+            <div className="product-pages">{num_pages} pages</div>
+            {/* eslint-disable-next-line camelcase */}
+            <div className="product-pages">Published in {published_year}</div>
+          </div>
+          <div className="about-section">
+            <div className="about">ABOUT</div>
+            <div className="product-description">{description}</div>
+          </div>
         </div>
-        <div className="add-to-favs">
-          <button className="ais-ClearRefinements-button" onClick={addConversionEvent}>Add to favs</button>
+        <div className="actions">
+          <div className="action-btn">
+            <button
+              className="ais-ClearRefinements-button"
+              onClick={addConversionEvent}
+            >
+              Add to favorites
+            </button>
+          </div>
+          <div className="action-btn">
+            <button
+              className="ais-ClearRefinements-button"
+              onClick={addConversionEvent}
+            >
+              Add to shelf
+            </button>
+          </div>
         </div>
       </div>
-      <div className="product-description">{description}</div>
 
       <RelatedProducts
         recommendClient={recommendClient}
@@ -83,6 +110,7 @@ const BookPage = () => {
         itemComponent={RelatedItem}
         view={HorizontalSlider}
         maxRecommendations={8}
+        headerComponent={Header}
       />
     </div>
   );

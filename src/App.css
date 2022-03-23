@@ -2,20 +2,24 @@ em {
   background: cyan;
   font-style: normal;
 }
-body { font-family: sans-serif; padding: 1em; }
-/*.ais-SearchBox { margin: 1em 0; }*/
-/*.ais-Pagination { margin-top: 1em }*/
+body {  padding: 1em; }
 .left-panel { float: left; width: 250px; }
-/*.right-panel { margin-left: 260px; }*/
 
+img {
+  display: block;
+  width: 125px;
+  border-radius: 10px;
+  height: auto;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
+}
 
 .header {
   display: flex;
   align-items: center;
   min-height: 50px;
   padding: 0.5rem 1rem;
-  background-image: linear-gradient(to right, #8e43e7, #00aeff);
-  color: #fff;
+  font-size: 30px;
+  font-weight: 800;
   margin-bottom: 1rem;
 }
 
@@ -38,3 +42,15 @@ body { font-family: sans-serif; padding: 1em; }
   font-size: 1.2rem;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: #0f0f0f;
+  text-decoration: none;
+}
