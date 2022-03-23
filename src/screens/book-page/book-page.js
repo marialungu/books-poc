@@ -1,29 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import algoliasearch from 'algoliasearch/lite';
 import { useParams } from 'react-router-dom';
 import { RelatedProducts } from '@algolia/recommend-react';
 import { HorizontalSlider } from '@algolia/ui-components-horizontal-slider-react';
 import '@algolia/ui-components-horizontal-slider-theme';
-import recommend from '@algolia/recommend';
 
 import aa from 'search-insights';
 import './book-page.css';
 import SectionComponent from '../../components/section-component';
 import RecommendItem from '../../components/recommend-item';
-
-const searchClient = algoliasearch(
-  'FP907897DQ',
-  'cad92f3af97b2106eebf573b5a8492d9'
-);
-
-const recommendClient = recommend(
-  'FP907897DQ',
-  'cad92f3af97b2106eebf573b5a8492d9'
-);
+import { recommendClient, searchClient } from '../../constants/init-clients';
+import { BOOKS_INDEX } from '../../constants/app-details';
 
 const BookPage = () => {
-  const indexName = 'books_poc';
-  const index = searchClient.initIndex(indexName);
+  const index = searchClient.initIndex(BOOKS_INDEX);
   const { productID, queryID } = useParams();
 
   const [product, setProduct] = useState({});
@@ -36,7 +25,7 @@ const BookPage = () => {
 
   const handleAddToFavorites = () => {
     aa('convertedObjectIDsAfterSearch', {
-      index: indexName,
+      index: BOOKS_INDEX,
       eventName: 'Product Added to Favs',
       userToken: 'user-1',
       objectIDs: [productID],
@@ -46,7 +35,7 @@ const BookPage = () => {
 
   const handleAddToShelf = () => {
     aa('convertedObjectIDsAfterSearch', {
-      index: indexName,
+      index: BOOKS_INDEX,
       eventName: 'Product Added to Shelf',
       userToken: 'user-1',
       objectIDs: [productID],
@@ -78,7 +67,6 @@ const BookPage = () => {
               <div className="product-subtitle">{subtitle}</div>
             </div>
             <div className="product-author">By {authors}</div>
-
           </div>
           <div className="product-metas">
             {/* eslint-disable-next-line camelcase */}
@@ -113,7 +101,7 @@ const BookPage = () => {
 
       <RelatedProducts
         recommendClient={recommendClient}
-        indexName={indexName}
+        indexName={BOOKS_INDEX}
         objectIDs={[productID]}
         itemComponent={RecommendItem}
         view={HorizontalSlider}
