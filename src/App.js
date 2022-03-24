@@ -7,10 +7,11 @@ import './App.css';
 import SearchPage from './screens/search-page';
 import BookPage from './screens/book-page';
 import AppHeader from './components/header';
+import { APP_DETAILS } from './constants/app-details';
 
 aa('init', {
-  appId: 'FP907897DQ',
-  apiKey: 'cad92f3af97b2106eebf573b5a8492d9',
+  appId: APP_DETAILS.APP_ID,
+  apiKey: APP_DETAILS.API_KEY,
 });
 
 aa('setUserToken', 'user-1');
