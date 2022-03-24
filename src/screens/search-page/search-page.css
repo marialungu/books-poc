@@ -1,5 +1,9 @@
-.searchbox {
+.search-box {
   margin-bottom: 2rem;
+}
+
+.search-panel {
+  width: calc(98% - 250px);;
 }
 
 .pagination {

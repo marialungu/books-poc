@@ -3,32 +3,14 @@
   flex-flow: row wrap;
   justify-content: space-between;
   gap: 30px 15px;
-}
-
-.card-container {
-  display: flex;
-  flex-direction: column;
-  width: 180px;
-}
-
-.book-details {
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem 0 1rem;
-  width: 100%;
-}
-
-.book-name {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-
-.book-author {
-  font-size: 14px;
+  margin-top: 2rem;
 }
 
 .show-more {
   width: 250px;
   margin: 2rem auto;
+}
+
+.sliders {
+  margin-top: 2rem;
 }

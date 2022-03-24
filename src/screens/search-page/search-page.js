@@ -13,15 +13,13 @@ const SearchPage = () => (
     <InstantSearch searchClient={searchClient} indexName={BOOKS_INDEX}>
       <Configure clickAnalytics />
       <SearchBox
-        className="searchbox"
+        className="search-box"
         translations={{
           placeholder: 'Search for your favorite books...',
         }}
         showLoadingIndicator={true}
       />
-      <div>
-        <Metas />
-      </div>
+      <Metas />
       <div className="results">
         <div className="left-panel">
           <BooksFilters />

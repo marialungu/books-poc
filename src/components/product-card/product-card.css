@@ -1,0 +1,22 @@
+.product-card-container {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+}
+
+.product-card-details {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0 1rem;
+  width: 100%;
+}
+
+.product-card-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.product-card-author {
+  font-size: 14px;
+}

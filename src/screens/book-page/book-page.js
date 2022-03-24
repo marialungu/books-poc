@@ -6,10 +6,9 @@ import '@algolia/ui-components-horizontal-slider-theme';
 
 import aa from 'search-insights';
 import './book-page.css';
-import SectionComponent from '../../components/section-component';
-import RecommendItem from '../../components/recommend-item';
 import { recommendClient, searchClient } from '../../constants/init-clients';
 import { BOOKS_INDEX } from '../../constants/app-details';
+import { RecommendProductCard } from '../../components/product-card';
 
 const BookPage = () => {
   const index = searchClient.initIndex(BOOKS_INDEX);
@@ -56,7 +55,7 @@ const BookPage = () => {
   } = product;
 
   return (
-    <div className="container">
+    <div className="container product-page">
       <div className="header">Book details</div>
       <div className="product-container">
         <img className="details" src={thumbnail} align="center" alt={title} />
@@ -103,10 +102,12 @@ const BookPage = () => {
         recommendClient={recommendClient}
         indexName={BOOKS_INDEX}
         objectIDs={[productID]}
-        itemComponent={RecommendItem}
+        itemComponent={RecommendProductCard}
         view={HorizontalSlider}
         maxRecommendations={8}
-        headerComponent={SectionComponent}
+        translations={{
+          title: 'Maybe you would also like',
+        }}
       />
     </div>
   );

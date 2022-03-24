@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@algolia/recommend": "^4.13.0",
-    "@algolia/recommend-react": "^1.1.0",
+    "@algolia/recommend-react": "^1.2.0",
     "@algolia/ui-components-horizontal-slider-react": "^1.0.0",
     "@algolia/ui-components-horizontal-slider-theme": "^1.0.0",
     "algoliasearch": "4",
