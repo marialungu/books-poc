@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import aa from 'search-insights';
 
 import 'instantsearch.css/themes/satellite.css';
@@ -19,12 +19,10 @@ aa('setUserToken', 'user-1');
 function App() {
   return (
     <AppHeader>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/products/:productID/:queryID" element={<BookPage />} />
-          <Route path="/" element={<SearchPage />} />
-        </Routes>
-      </BrowserRouter>
+      <Routes>
+        <Route path="/products/:productID/:queryID" element={<BookPage />} />
+        <Route path="/" element={<SearchPage />} />
+      </Routes>
     </AppHeader>
   );
 }
