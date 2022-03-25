@@ -1,6 +1,12 @@
-# books-poc-app
+# ReadNook
+
+### A POC app created for showcasing Algolia's Search and Recommend features
 
 _This project was generated with [create-instantsearch-app](https://github.com/algolia/create-instantsearch-app) by [Algolia](https://algolia.com)._
+
+## Find it live
+
+[ReadNook](https://marialungu.github.io/books-poc/)
 
 ## Get started
 
