@@ -1,7 +1,6 @@
 {
   "name": "books-poc-app",
-  "homepage": ".",
-  "proxy": "http://localhost:3000",
+  "homepage": "https://marialungu.github.io/books-poc/",
   "version": "1.0.0",
   "private": true,
   "scripts": {
