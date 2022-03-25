@@ -1,15 +1,15 @@
 {
-  "main.css": "/books-poc/static/css/main.9e155009.chunk.css",
-  "main.js": "/books-poc/static/js/main.aa375981.chunk.js",
-  "main.js.map": "/books-poc/static/js/main.aa375981.chunk.js.map",
+  "main.css": "/books-poc/static/css/main.faf7ddb2.chunk.css",
+  "main.js": "/books-poc/static/js/main.481a166d.chunk.js",
+  "main.js.map": "/books-poc/static/js/main.481a166d.chunk.js.map",
   "static/css/1.d502eaf4.chunk.css": "/books-poc/static/css/1.d502eaf4.chunk.css",
   "static/js/1.3a600cd3.chunk.js": "/books-poc/static/js/1.3a600cd3.chunk.js",
   "static/js/1.3a600cd3.chunk.js.map": "/books-poc/static/js/1.3a600cd3.chunk.js.map",
   "runtime~main.js": "/books-poc/static/js/runtime~main.91d98702.js",
   "runtime~main.js.map": "/books-poc/static/js/runtime~main.91d98702.js.map",
   "static/css/1.d502eaf4.chunk.css.map": "/books-poc/static/css/1.d502eaf4.chunk.css.map",
-  "static/css/main.9e155009.chunk.css.map": "/books-poc/static/css/main.9e155009.chunk.css.map",
+  "static/css/main.faf7ddb2.chunk.css.map": "/books-poc/static/css/main.faf7ddb2.chunk.css.map",
   "index.html": "/books-poc/index.html",
-  "precache-manifest.9c991b2d87891ea579b84583da4c11c1.js": "/books-poc/precache-manifest.9c991b2d87891ea579b84583da4c11c1.js",
+  "precache-manifest.216dd1addb9ac1d6be1b369d797a6bf1.js": "/books-poc/precache-manifest.216dd1addb9ac1d6be1b369d797a6bf1.js",
   "service-worker.js": "/books-poc/service-worker.js"
 }

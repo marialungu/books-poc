@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "aa375981be670320e17c",
-    "url": "/books-poc/static/css/main.9e155009.chunk.css"
+    "revision": "481a166d7bcfbde2321c",
+    "url": "/books-poc/static/css/main.faf7ddb2.chunk.css"
   },
   {
-    "revision": "aa375981be670320e17c",
-    "url": "/books-poc/static/js/main.aa375981.chunk.js"
+    "revision": "481a166d7bcfbde2321c",
+    "url": "/books-poc/static/js/main.481a166d.chunk.js"
   },
   {
     "revision": "3a600cd3d0be6c2a29b4",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/books-poc/static/js/runtime~main.91d98702.js"
   },
   {
-    "revision": "dc367aa0ad09eaf031e081410b10a6bb",
+    "revision": "d80e186fd45b9bd1a45d358afb0d9ee5",
     "url": "/books-poc/index.html"
   }
 ];
