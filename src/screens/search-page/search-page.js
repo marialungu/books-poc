@@ -14,7 +14,7 @@ import './search-page.css';
 import { searchClient } from '../../constants/init-clients';
 import { BOOKS_INDEX } from '../../constants/app-details';
 
-const FragmentedPage = () => (
+const BooksContainer = () => (
   <>
     <Metas />
     <div className="results">
@@ -34,7 +34,7 @@ const PageContent = connectStateResults(({ isSearchStalled }) =>
       <RotateLoader color={'#9698c3'} size={11} />
     </div>
   ) : (
-    <FragmentedPage />
+    <BooksContainer />
   )
 );
 
