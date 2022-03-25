@@ -31,7 +31,7 @@ const BooksContainer = () => (
 const PageContent = connectStateResults(({ isSearchStalled }) =>
   isSearchStalled ? (
     <div className="loader">
-      <RotateLoader color={'#9698c3'} size={11} />
+      <RotateLoader color={'#9698c3'} size={13} />
     </div>
   ) : (
     <BooksContainer />
